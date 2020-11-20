@@ -29,7 +29,7 @@ export function activate(context: vscode.ExtensionContext) {
 	context.subscriptions.push(pickDisposableCommand);
 
 
-	context.subscriptions.push(vscode.notebook.registerNotebookContentProvider('PostBox.restNotebook', new CallsNotebookProvider()))
+	context.subscriptions.push(vscode.notebook.registerNotebookContentProvider('PostBox.restNotebook', new CallsNotebookProvider()));
 }
 
 // this method is called when your extension is deactivated

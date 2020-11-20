@@ -45,7 +45,7 @@ class CallsNotebookProvider {
                 raw = [];
             }
             const notebookData = {
-                languages: ['PostBox'],
+                languages: ['postbox'],
                 metadata: {
                     cellRunnable: true,
                     cellHasExecutionOrder: true,

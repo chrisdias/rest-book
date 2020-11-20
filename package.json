@@ -1,6 +1,6 @@
 {
-  "name": "PostBox",
-  "displayName": "Post Box",
+  "name": "postbox",
+  "displayName": "PostBox",
   "description": "A Postman-like REST API Client for sending to and receiving from REST endpoints.",
   "version": "0.0.1",
   "engines": {
@@ -12,16 +12,22 @@
   ],
   "activationEvents": [
     "onCommand:PostBox.commandRestCall",
-    "onNotebook:PostBox.restNotebook"
+    "onNotebook:PostBox.restNotebook",
+    "onLanguage:postbox"
   ],
   "main": "./out/extension.js",
   "contributes": {
-    "commands": [
-      {
-        "command": "PostBox.commandRestCall",
-        "title": "PostBox: REST Call"
-      }
-    ],
+    "languages": [
+			{
+				"id": "postbox",
+				"aliases": [
+					"PostBox"
+				],
+				"filenamePatterns": [
+					"*.postbox.txt"
+				]
+			}
+		],
     "notebookProvider": [
       {
         "viewType": "PostBox.restNotebook",
@@ -31,6 +37,12 @@
             "filenamePattern": "*.postbox"
           }
         ]
+      }
+    ],
+    "commands": [
+      {
+        "command": "PostBox.commandRestCall",
+        "title": "PostBox: REST Call"
       }
     ]
   },

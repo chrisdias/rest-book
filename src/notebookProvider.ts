@@ -56,7 +56,7 @@ export class CallsNotebookProvider implements vscode.NotebookContentProvider, vs
         }
 
         const notebookData: vscode.NotebookData = {
-            languages: ['PostBox'],
+            languages: ['postbox'],
             metadata: {
                 cellRunnable: true,
                 cellHasExecutionOrder: true,
